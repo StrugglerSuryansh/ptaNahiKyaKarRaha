@@ -1,0 +1,189 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: xyz;
+}
+
+html,
+body {
+ width: 100%;
+ height: 100%;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", "sans-serif";
+}
+html {
+ font-size: 62.5%;
+}
+body {
+ background-color: #f4f4f4;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.profile-card {
+ background-color: #fff;
+ box-shadow: 0 5px 10px
+  rgba(0, 0, 0, 0.1);
+ border-radius: 24px;
+ padding: 2.5rem;
+ width: 36rem;
+ position: relative;
+ z-index: 3;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.profile-card::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 15rem;
+ width: 100%;
+ border-radius: 24px 24px 0 0;
+ background-color: #4070f4;
+}
+.profile-card .image {
+ border-radius: 50%;
+ background-color: #4070f4;
+ height: 15rem;
+ margin-bottom: 2rem;
+ padding: 0.3rem;
+ width: 15rem;
+ position: relative;
+ z-index: 3;
+}
+.image img {
+ border: 3px solid #fff;
+ border-radius: 50%;
+ object-fit: cover;
+ margin-bottom: 0.1rem;
+ height: 100%;
+ width: 100%;
+}
+.profile-card .text-data {
+ text-align: center;
+}
+.text-data h2 {
+ font-size: 2.2rem;
+ font-weight: 500;
+}
+.text-data p {
+ font-size: 1.8rem;
+ font-weight: 400;
+}
+.media-icons {
+ margin-top: 1.5rem;
+}
+.media-icons a {
+ border-radius: 50%;
+ color: white;
+ display: inline-block;
+ font-size: 2rem;
+ height: 3.5rem;
+ width: 3.5rem;
+ padding-inline: 1rem;
+ position: relative;
+ margin-inline: 0.8rem;
+}
+.media-icons i {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+.buttons {
+ margin-top: 2.5rem;
+}
+.buttons button {
+ background-color: #4070f4;
+ border-radius: 2.4rem;
+ border: none;
+ cursor: pointer;
+ color: #fff;
+ font-size: 1.6rem;
+ font-weight: 400;
+ padding: 0.8rem 2.4rem;
+ margin-inline: 1.2rem;
+}
+.buttons button:hover {
+ background-color: #152551;
+}
+
+.buttons button a {
+ text-decoration: none;
+ color: #f4f4f4;
+}
+.profile-card .analytics {
+ margin-top: 2.5rem;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+.analytics .data {
+ color: #333;
+ padding: 0.2rem;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+}
+.data i {
+ font-size: 1.8rem;
+ margin-right: 0.3rem;
+}
+.data p {
+ font-size: 2rem;
+}
+/* media queries  */
+@media (width <= 390px) {
+ html {
+  font-size: 56.25%;
+ }
+}
+@media (width <= 370px) {
+ html {
+  font-size: 50%;
+ }
+}
+
+.cards {
+ margin-top: 2.5rem;
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1.5rem;
+ justify-content: center;
+}
+
+.card {
+ background-color: #fff;
+ border-radius: 12px;
+ box-shadow: 0 4px 8px
+  rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+ width: 30rem;
+ max-width: 100%;
+ text-align: center;
+}
+
+.card img {
+ width: 100%;
+ height: 20rem;
+ object-fit: cover;
+}
+
+.card p {
+ padding: 1rem;
+ font-size: 1.6rem;
+ color: #333;
+}

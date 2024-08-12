@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+    <section class="profile-card">
+        <div class="image">
+            <img src="/images/suryansh.jpg" alt="user image">
+        </div>
+        <div class="text-data">
+            <h2>
+                <%=user.username%>
+            </h2>
+            <p>Lorem ipsum dolor sit, amet consectetur .</p>
+        </div>
+        <div class="media-icons">
+            <a href="#" style="background-color: #ff0000;">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" style="background-color: #1da1f2" ;>
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" style="background-color: #4267b2" ;>
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" style="background-color: #e13062" ;>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="buttons">
+            <button><a href="/logout">logout</a></button>
+            <button>Message</button>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="text" name="imagecaption" placeholder="some caption">
+                <input type="file" name="file">
+                <input type="submit">
+            </form>
+        </div>
+        <div class="analytics">
+            <div class="data">
+                <i class="fa-solid fa-heart"></i>
+                <p>60K</p>
+            </div>
+            <div class="data">
+                <i class="fa-regular fa-comment"></i>
+                <p>60K</p>
+            </div>
+            <div class="data">
+                <i class="fa-solid fa-share"></i>
+                <p>60K</p>
+            </div>
+        </div>
+    </section>
+    <div class="cards">
+        <% user.posts.forEach(function(post){ %>
+            <div class="card">
+                <img src="/images/uploads/<%= post.image %>" alt="Image">
+                <p>
+                    <%= post.imagecaption %>
+                </p>
+            </div>
+            <% }) %>
+    </div>
+
+
+
+</body>
+
+</html>
