@@ -2,19 +2,6 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- font-family: xyz;
-}
-
-html,
-body {
- width: 100%;
- height: 100%;
-}
-
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
  font-family: "Poppins", "sans-serif";
 }
 html {
@@ -24,6 +11,7 @@ body {
  background-color: #f4f4f4;
  min-height: 100vh;
  display: flex;
+ flex-direction: column;
  align-items: center;
  justify-content: center;
 }
